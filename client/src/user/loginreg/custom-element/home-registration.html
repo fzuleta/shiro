@@ -1,0 +1,44 @@
+<template>
+<div class="whiteness reg">
+    <form submit.delegate = "signup()">
+
+        <div class="text-info text-center" show.bind="errorMessage != ''">
+            <span style="font-size: 16px; font-weight: 200;">
+                ${errorMessage}
+            </span>
+        </div>
+
+        <div class="form-group ">
+            <input type="text" value.bind="username" class="form-control input-sm" placeholder="${ i18n.tr('regpages:register.email_placeholder') }">
+        </div>
+        <div class="form-group ">
+            <input type="password" value.bind="password" class="form-control input-sm" placeholder="${ i18n.tr('regpages:register.password_placeholder') }" >
+        </div>
+
+
+        <div align="center" class="form-group nopadding nomargin"> 
+            <div class="checkbox" align="left" style="padding-left: 20px;font-size: 10px;">
+
+                <input type="checkbox" class="i-checks approveCheck" checked.bind="tosCheck">
+                <span t="regpages:register.tos_01">I agree with</span>
+
+                <a target="_blank" t="regpages:register.tos_02">
+                    terms and conditions
+                </a>
+                <span t="regpages:register.tos_03">and</span>
+                <a target="_blank"  t="regpages:register.tos_04">
+                    privacy policy 
+               </a>
+           </div>
+
+           <recaptcha theme="light" verified.call="onCaptchaVerified()" if.bind="constants.captchaEnabled"></recaptcha>
+           <br clear="all">
+       </div>
+
+        <div class="form-group nopadding nomargin" align="center">
+            <button type="submit" class="btn btn-success btn-block btn-send-data" t="regpages:register.btnregister">Sign up</button>
+        </div>
+        <br clear="all">
+    </form>
+</div>
+</template>

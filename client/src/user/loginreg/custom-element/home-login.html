@@ -1,0 +1,38 @@
+<template>
+<div class="whiteness login">
+
+    <!-- <div class="form-group" style="text-align:right;">
+        <a click.trigger="twitchLogin()">
+            <img src="images/connect/twitchLogin.png" width="160" height="40" border="0">
+        </a>
+    </div> -->
+
+    <div class="text-info text-center" show.bind="errorMessage != ''">
+        <span style="font-size: 16px; font-weight: 200;">
+            ${errorMessage}
+        </span>
+    </div>
+
+    <form submit.delegate = "login()">
+
+        <div class="form-group">
+            <!-- <label class="control-label" for="username" t="regpages:login.user">User</label> -->
+            <input type="text" placeholder="${i18n.tr('regpages:login.user_placeholder')}"  value.bind="username" class="form-control input-sm">
+        </div>
+        <div class="form-group">
+            <!-- <label class="control-label" for="password" t="regpages:login.password">Password</label> -->
+            <input type="password"  placeholder="${i18n.tr('regpages:login.password_placeholder')}"  value.bind="password" ref="txtPass" class="form-control input-sm">
+        </div>
+        <div class="checkbox" align="left" style="padding-left: 20px;">
+            <div class="pull-right">
+                <a click.trigger="forgotPassword()" t="regpages:login.forgotpassword">Forgot password</a> 
+            </div>
+
+            <input type="checkbox" class="i-checks" id="chkRememberMe" name="chkRememberMe" checked.bind="rememberMe">
+            <span t="regpages:login.rememberme">Remembe me</span> 
+            <p class="help-block small" t="regpages:login.rememberme1">(only if private device)</p>
+        </div>
+        <button type="submit" class="btn btn-success btn-block btn-send-data"  t="regpages:login.btnlogin">Login</button>
+    </form>
+</div>
+</template>

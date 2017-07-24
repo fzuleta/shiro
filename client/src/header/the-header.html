@@ -1,0 +1,19 @@
+<template>
+
+<div style="display: flex;">
+    <div style="padding: 0 10px 0 10px;">
+        <label for="header-language-select">Language:</label> 
+    </div>
+    <div style="padding: 0 10px 0 10px;">
+        <select id="header-language-select" value.bind="sel_lang" class="form-control input-sm" style="width: 80px;">
+            <option model.bind="lang" repeat.for="lang of languages">
+                ${lang.label}
+            </option>
+        </select> 
+    </div>
+    <div show.bind="user.isAuthenticatedOrRemembered" style="padding: 0 10px 0 10px;">
+        <div click.trigger="logout()" style="cursor: pointer;">Logout</div>
+    </div>
+</div>
+
+</template>

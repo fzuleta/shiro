@@ -1,0 +1,25 @@
+<template>
+<section>
+
+<div class="login-container" id="pageContent" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3  content-page">
+                <div class="hpanel">
+                    <div class="panel-body theForm">
+                        <div class="text-danger text-center" show.bind="errorMessage != ''"><h3>Oops! ${errorMessage}</h3></div>
+                        <form submit.delegate="doConfirmPin()" method="post" id="loginForm" accept-charset="UTF-8" role="form">
+                            <div class="form-group">
+                                <label class="control-label" for="code" t="regpages:confirmpin.code">Code</label>
+                                <input type="text" placeholder="${ i18n.tr('regpages:confirmpin.code_placeholder') }" value.bind="code" class="form-control">
+                            </div>
+                            <button class="btn btn-success btn-block btn-send-data" t="regpages:confirmpin.btnconfirm">Confirm</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+</template>

@@ -1,0 +1,18 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+/**/.idea/**
+*.iml
+/out/
+/META-INF/
+*Thumbs.db
+/**/.tmp/**
+/**/.gradle/**
+/**/build/**
+/**/out/**
+/**/log/**
+
+# ...even if they are in subdirectories
+!*/

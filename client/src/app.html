@@ -1,0 +1,22 @@
+<template>
+    <require from="./style/style.css"></require>
+    <require from="./header/the-header"></require> 
+    
+    <!-- Loader screen -->
+    <div id="loadingScreen" class="loader-animate-panel" >
+        <div class="splash-title">
+            <img src="images/loading_b.gif" />
+        </div>  
+    </div>
+
+    <div style="background-color: #607d8b;height:68px; border-bottom: #708a97 solid 2px;">
+        <the-header></the-header> 
+    </div>
+
+    <!-- Main rendering router -->
+    <div style="min-height:500px;">
+        <router-view name="mainView"></router-view>
+    </div>
+
+     
+</template>

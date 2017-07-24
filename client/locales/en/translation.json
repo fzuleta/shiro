@@ -1,0 +1,18 @@
+{
+    "success": {
+        "success_0":"Content successfully edited."
+    },
+
+    "error": {
+        "genericError_0": "There was an error processing your request",
+        "genericError_1": "Please revise all data has been properly filled.",
+        "captcha_0": "There was a captcha error, please try again.",
+        "route_not_found": "Route not found."
+    },
+    
+    "fileupload":{
+        "chooseafile": "Choose a File",
+        "cancel": "Cancel",
+        "save": "OK"
+    }
+}

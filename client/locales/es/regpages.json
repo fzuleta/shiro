@@ -1,0 +1,68 @@
+{
+"register": {
+    "title": "Registrate!",
+    "nickname": "GG Apodo",
+    "nickname_copy": "Este es tu apodo en GG",
+    "nickname_placeholder": "GG Apodo",
+    "email": "Email",
+    "email_placeholder": "ejemplo@email.com",
+    "password": "Contraseña",
+    "password_placeholder": "*****",
+    "password_confirm": "Confirmar Contraseña",
+    "password_confirm_placeholder": "*****",
+
+    "tos_01": "Estoy de acuerdo con ",
+    "tos_02": "los términos, condiciones",
+    "tos_03": " y ",
+    "tos_04": "politicas de privacidad",
+    "btnregister": "Registro"
+},
+
+"login": {
+    "title": "Email Log-in",
+    "user": "Usuario",
+    "user_placeholder": "ejemplo@email.com",
+    "password": "Contraseña",
+    "password_placeholder": "*****",
+    "rememberme": "Recordarme",
+    "rememberme1": "(solo en dispositivos privados)",
+    "forgotpassword": "Olvide Contraseña",
+    "btnlogin": "Login",
+    "error0": "Email Invalido",
+    "error1": "Contraseña min de 6 digitos"
+},
+
+"forgotpassword": {
+    "user": "Usuario (Email)",
+    "user_placeholder": "ejemplo@email.com",
+    "btnremember": "Recordarme",
+    "errorMessage" : "Email invalido",
+    "successMessage" : "Mensaje enviado!",
+    "errorMessage1" : "Error"
+},
+
+"forgotpasswordrecover": {
+    "code": "Código",
+    "code_placeholder": "",
+    "password": "Contraseña",
+    "password_placeholder": "*****",
+    "password_confirm": "Confirmar Contraseña",
+    "password_confirm_placeholder": "*****",
+    "btnchange": "Cambiar",
+    "errors":{
+        "e0": "Código invalido",
+        "e1": "Contraseña minimo de 6 caractéres.",
+        "e2": "Contraseñas no cohinciden."
+    },
+    "success": "Message sent!"
+},
+
+"confirmpin": {
+    "code": "Código",
+    "code_placeholder": "",
+    "btnconfirm": "Confirmar",
+
+    "errorMessage0" : "Email invalido",
+    "errorMessage1" : "Error"
+}
+}

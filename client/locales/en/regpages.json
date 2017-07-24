@@ -1,0 +1,68 @@
+{
+"register": {
+    "title": "Sign Up!",
+    "nickname": "GG Nickname",
+    "nickname_copy": "This is your nickname id",
+    "nickname_placeholder": "GG Nick",
+    "email": "Email",
+    "email_placeholder": "example@email.com",
+    "password": "Password",
+    "password_placeholder": "*****",
+    "password_confirm": "Password confirm",
+    "password_confirm_placeholder": "*****",
+
+    "tos_01": "I agree with ",
+    "tos_02": "terms and conditions",
+    "tos_03": " and ",
+    "tos_04": "privacy policy",
+    "btnregister": "Sign up"
+},
+
+"login": {
+    "title": "Email Log-in",
+    "user": "User",
+    "user_placeholder": "example@example.com",
+    "password": "Password",
+    "password_placeholder": "*****",
+    "rememberme": "Remember me",
+    "rememberme1": "(only if private device)",
+    "forgotpassword": "Forgot password",
+    "btnlogin": "Login",
+    "error0": "Invalid Email",
+    "error1": "Password must be at least 6 digits"
+},
+
+"forgotpassword": {
+    "user": "User (Email)",
+    "user_placeholder": "example@example.com",
+    "btnremember": "Remember",
+    "errorMessage" : "Invalid email",
+    "successMessage" : "Message sent!",
+    "errorMessage1" : "Error"
+},
+
+"forgotpasswordrecover": {
+    "code": "Code",
+    "code_placeholder": "",
+    "password": "Password",
+    "password_placeholder": "*****",
+    "password_confirm": "Password confirm",
+    "password_confirm_placeholder": "*****",
+    "btnchange": "Change",
+    "errors":{
+        "e0": "Invalid code",
+        "e1": "Password must be 6 digits",
+        "e2": "Passwords don't match"
+    },
+    "success": "Message sent!"
+},
+
+"confirmpin": {
+    "code": "Code",
+    "code_placeholder": "",
+    "btnconfirm": "Confirm",
+
+    "errorMessage0" : "Invalid email",
+    "errorMessage1" : "Error"
+}
+}

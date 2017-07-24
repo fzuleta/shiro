@@ -1,0 +1,18 @@
+{
+    "success": {
+        "success_0":"Contenido editado satisfactoriamente."
+    },
+
+    "error": {
+        "genericError_0": "Ocurrio un error procesando tu solicitud.",
+        "genericError_1": "Revisa que hayas llenado todos los campos.",
+        "captcha_0": "Ocurrio un error en el captcha, intenta de nuevo",
+        "route_not_found": "Ruta no encontrada."
+    },
+    
+    "fileupload":{
+        "chooseafile": "Escoge un archivo",
+        "cancel": "Cancelar",
+        "save": "OK"
+    }
+}

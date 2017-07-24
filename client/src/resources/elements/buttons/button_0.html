@@ -1,0 +1,49 @@
+<template>
+    <style>
+    .btn-blue-custom-element {
+        background-color: #2979ff;
+        border-radius: 5px;
+        /*width: 190px;*/
+        height: 50px;
+        cursor: pointer;
+        color: white;
+        font-family: 'Play', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+        font-size: 24px;
+        padding: 6px 5px 0 5px;
+        text-align: center;
+    }
+
+    .btn-empty-custom-element { 
+        border: 1px solid #535353;
+        border-radius: 5px;
+        min-width: 70px;
+        height: 50px;
+        cursor: pointer;
+        color: #4b4b4b;
+        font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        padding: 12px 5px 0 5px;
+        text-align: center;
+        margin:0 0 0 5px;
+    }
+
+    /*Web Screen*/
+    @media (min-width: 769px) {
+        .btn-blue-custom-element,
+        .btn-empty-custom-element {
+            min-width: 100px;
+        }
+    }
+    /*Mobile screen*/
+    @media (max-width: 768px) {
+        .btn-element-icon-custom-element {
+            display: none;
+        }
+    }
+    </style>
+
+    <div class.bind="btnclass">
+        <img show.bind="iconsrc!=''" src.bind="iconsrc" width="${iconwidth}" height="${iconheight}" class="btn-element-icon-custom-element"> 
+        ${text}
+    </div>
+</template>

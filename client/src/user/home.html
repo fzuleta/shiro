@@ -1,0 +1,17 @@
+<template>
+<require from="./loginreg/style.css"></require>
+<require from="./loginreg/custom-element/home-login"></require>
+<require from="./loginreg/custom-element/home-registration"></require>
+<section show.bind="showUI">
+    <div id="homescreen" align="center">
+        <div class="bg">
+            <div class="forms">
+                <home-login></home-login> 
+                <home-registration></home-registration>
+            </div>
+            <br clear="all">
+        </div>
+    </div>
+</section>
+
+</template>

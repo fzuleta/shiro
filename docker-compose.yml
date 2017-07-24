@@ -1,0 +1,67 @@
+version: '3'
+
+services:
+  # to enable the management plugin (web)
+  # docker exec fz_rabbitmq rabbitmq-plugins enable rabbitmq_management
+  rabbitmq:
+    hostname: fz_rabbitmq
+    container_name: fz_rabbitmq
+    image: rabbitmq:alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=root
+      - RABBITMQ_ERLANG_COOKIE=fzcookie
+    ports:
+      - "10001:15672"
+      - "5672:5672"
+
+  webserver:
+    container_name: fz_webserver
+    image: fz/webserver:latest
+    environment:
+      - AURELIALOCATION=/opt/aurelia
+      - SSLPATH=/opt/shiro/self.keystore
+      - SSLPASS=some-password
+    build:
+      context: .
+      dockerfile: ./.docker/webserver/file.dockerfile
+    ports:
+      - "9080:8880"
+      - "9443:8443"
+
+  apigateway:
+    container_name: fz_apigateway
+    image: fz/apigateway:latest
+    environment:
+      - RABBIT_HOST=fz_rabbitmq
+      - RABBIT_USER=root
+      - RABBIT_PASS=root
+      - RABBIT_PORT=5672
+      - DOMAIN=localhost
+      - REMEMBERME=Tzhfrprwksieaxxw
+      - HASHSERVICE=LnnjousalfizuleiPsiyzzwpelvbnfpo
+      - PASSWORDSALT=Hagqudyjehyyzhqr
+      - SESSIONDURATION=3600000
+      - SSLPATH=/opt/shiro/self.keystore
+      - SSLPASS=some-password
+      - CORS=*
+    build:
+      context: .
+      dockerfile: ./.docker/apigateway/file.dockerfile
+    ports:
+      - "8090:8090"
+
+  members:
+    container_name: fz_members
+    image: fz/members:latest
+    environment:
+      - RABBIT_HOST=fz_rabbitmq
+      - RABBIT_USER=root
+      - RABBIT_PASS=root
+      - RABBIT_PORT=5672
+      - PASSWORDSALT=Hagqudyjehyyzhqr
+    build:
+      context: .
+      dockerfile: ./.docker/members/file.dockerfile
+
+

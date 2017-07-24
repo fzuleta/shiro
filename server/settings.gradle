@@ -1,0 +1,3 @@
+include 'libs', 'webserver', 'apigateway', 'members'
+
+rootProject.name = 'Shiro'
