@@ -8,7 +8,7 @@ Provides initial code for a project that allows user/registration/forgotpass/con
 - bootstrap layout (desktop|tablets|mobile)
 
 **Back end**
-- Java
+- Kotlin (java)
 - Apache shiro for session management
 - RabbitMQ for services communication
 - Jetty for api endpoints
