@@ -52,7 +52,7 @@ class Register: EndPoint() {
 
         val member = Member()
         member.username = username
-        member.password = Shiro.getPasswordService().encryptPassword(password)
+        member.password = Shiro.encryptPassword(password)
         member.dateRegistration = utcTime.toEpochSecond(ZoneOffset.UTC)
 
         val epRegister = Rabbit.ep("members.register", member.toJsonObject())

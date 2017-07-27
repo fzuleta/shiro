@@ -24,7 +24,7 @@ class forgot_password_recover {
 
         val passwordEncrypted =
                 if (Shiro.exists)
-                    Shiro.getPasswordService().encryptPassword(obj.get("password").asString)
+                    Shiro.encryptPassword(obj.get("password").asString)
                  else
                     obj.s("passwordEncrypted")
 

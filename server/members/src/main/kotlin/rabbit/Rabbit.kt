@@ -44,7 +44,7 @@ object Rabbit {
             val m = Member()
             m.reference = "r${Math.random()}"
             m.username = "$it@a.com"
-            m.password = Shiro.getPasswordService().encryptPassword("123123")
+            m.password = Shiro.encryptPassword("123123")
             db_users.restore(m)
             println("restored: ${m.username}")
         })

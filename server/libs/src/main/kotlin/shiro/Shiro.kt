@@ -15,27 +15,15 @@ object Shiro {
     var domain                  = "localhost"
     var rememberMeCypher        = "Tzhfrprwksieaxxw"
     var hashService             = "LnnjousalfizuleiPsiyzzwpelvbnfpo"
-    var passwordSalt            = "Hagqudyjehyyzhqr"
     var sessionDuration:Long    = 3600000
 
     val hashIterations          = 2048
-    var _passwordService: DefaultPasswordService? = null
-
-    fun getPasswordService(): DefaultPasswordService {
-        if (_passwordService == null) {
-            val hashService = DefaultHashService()
-            hashService.hashIterations = hashIterations // 500000
-            hashService.hashAlgorithmName = Sha256Hash.ALGORITHM_NAME
-            hashService.privateSalt = SimpleByteSource(passwordSalt) // NOT base64-encoded.
-            hashService.isGeneratePublicSalt = true
-
-            _passwordService = DefaultPasswordService()
-            _passwordService!!.hashService = hashService
-        }
-
-        return _passwordService!!
+    private val passwordService: DefaultPasswordService by lazy {
+        MyShiroConstructor.getPasswordService()
     }
-    fun validatePassword(plain:String, encrypted:String)= getPasswordService().passwordsMatch(plain, encrypted)
+
+    fun encryptPassword(plain:String) = passwordService.encryptPassword(plain)
+    fun validatePassword(plain:String, encrypted:String)= passwordService.passwordsMatch(plain, encrypted)
 
     fun validateSession(s: Subject): Boolean {
         var b = false

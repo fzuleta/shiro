@@ -23,7 +23,6 @@ fun main(args: Array<String>) {
     val domain:String                 = System.getenv("DOMAIN") ?: "localhost"
     val rememberMeCypher:String       = System.getenv("REMEMBERME") ?: "Tzhfrprwksieaxxw"
     val hashService:String            = System.getenv("HASHSERVICE") ?: "LnnjousalfizuleiPsiyzzwpelvbnfpo"
-    val passwordSalt:String           = System.getenv("PASSWORDSALT") ?: "Hagqudyjehyyzhqr"
     val sessionDuration:String        = System.getenv("SESSIONDURATION") ?: "3600000"
 
     val ip:String                     = "0.0.0.0"
@@ -50,7 +49,6 @@ fun main(args: Array<String>) {
     Shiro.domain = domain
     Shiro.rememberMeCypher = rememberMeCypher
     Shiro.hashService = hashService
-    Shiro.passwordSalt = passwordSalt
     Shiro.sessionDuration = sessionDuration.toLong()
 
     // Jetty

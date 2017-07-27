@@ -40,7 +40,6 @@ services:
       - DOMAIN=localhost
       - REMEMBERME=Tzhfrprwksieaxxw
       - HASHSERVICE=LnnjousalfizuleiPsiyzzwpelvbnfpo
-      - PASSWORDSALT=Hagqudyjehyyzhqr
       - SESSIONDURATION=3600000
       - SSLPATH=/opt/shiro/self.keystore
       - SSLPASS=some-password
@@ -60,7 +59,7 @@ services:
       - RABBIT_USER=root
       - RABBIT_PASS=root
       - RABBIT_PORT=10002
-      - PASSWORDSALT=Hagqudyjehyyzhqr
+      - HASHSERVICE=LnnjousalfizuleiPsiyzzwpelvbnfpo
     build:
       context: .
       dockerfile: ./.docker/members/file.dockerfile

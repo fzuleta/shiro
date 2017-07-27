@@ -14,6 +14,7 @@ au build --env prod
 cd ..
 
 #Remove any running docker containers
+docker rm -f -v fz_rabbitmq
 docker rm -f -v fz_apigateway
 docker rm -f -v fz_webserver
 docker rm -f -v fz_members
