@@ -14,4 +14,5 @@ fun main(args: Array<String>){
     Shiro.hashService = hashService
 
     Rabbit.start(rabbitHost, rabbitPort.toInt(), rabbitUser, rabbitPass)
+    Shiro.exists = true
 }

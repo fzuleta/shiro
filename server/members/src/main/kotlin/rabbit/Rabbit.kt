@@ -9,6 +9,9 @@ import shiro.Shiro
 object Rabbit {
     val r = RabbitMQ()
     var started = false
+        get() {
+            return r.started
+        }
 
     fun start(host:String = "localhost", port:Int = 15672, user:String = "root", password:String = "root"){
         if (started) return
